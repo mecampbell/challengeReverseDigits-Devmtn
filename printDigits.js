@@ -18,10 +18,14 @@
 // // 1
 
 const printDigits = (num) => {
-    for (let i = 0; i < num.length; i--) {
-        console.log(num[i])
+    let digit, result = 0;
+
+    while ( num ) {
+        digit = num % 10;
+        result = (result * 10) + digit;
+        num - num/10|0;
     }
-    return num;
+    return result;
 }
 
-console.log(printDigits(5643));
+console.log(printDigits(123));
